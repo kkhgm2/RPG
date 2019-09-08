@@ -1,10 +1,9 @@
-
 public class Character {
 	public String name;
 	public int hp;
 	public int mp;
 
-	Character(String name, int hp, int mp){
+	public Character(String name, int hp, int mp){
 		this.name = name;
 		this.hp = hp;
 		this.mp = mp;
@@ -28,5 +27,4 @@ public class Character {
 		c2.introduce();
 		c3.introduce();
 	}
-
 }
