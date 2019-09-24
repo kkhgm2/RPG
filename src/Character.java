@@ -21,6 +21,11 @@ public class Character {
 		System.out.println("残りのHP は" + this.hp + "だ。");
 	}
 
+	public void attack(Character c) {
+		System.out.println(this.name + "の攻撃！");
+		c.damage(20);
+	}
+
 	public static void  main(String[] args) {
 		Character c1 = new Character("ドラえもん", 20, 20);
 		Character c2 = new Character("のび太", 10, 10);
@@ -32,7 +37,7 @@ public class Character {
 		c1.introduce();
 		c2.introduce();
 		c3.introduce();
-		c1.damage(20);
-		c1.introduce();
+		c1.attack(c2);
+		c2.introduce();
 	}
 }
