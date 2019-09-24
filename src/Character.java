@@ -15,6 +15,12 @@ public class Character {
 		System.out.println("MPは" + mp + "です");
 	}
 
+	public void damage(int at) {
+		this.hp -= at;
+		System.out.println(this.name + "は、" + at + "の攻撃を受けた。");
+		System.out.println("残りのHP は" + this.hp + "だ。");
+	}
+
 	public static void  main(String[] args) {
 		Character c1 = new Character("ドラえもん", 20, 20);
 		Character c2 = new Character("のび太", 10, 10);
@@ -26,5 +32,7 @@ public class Character {
 		c1.introduce();
 		c2.introduce();
 		c3.introduce();
+		c1.damage(20);
+		c1.introduce();
 	}
 }
