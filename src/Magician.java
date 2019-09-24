@@ -13,7 +13,7 @@ public class Magician extends Character{
 	@Override
 	public void attack(Character c) {
 		System.out.println(this.name + "の攻撃！");
-		c.damage(Math.floor(this.mp*1.2));
+		c.damage((int)Math.floor(this.mp*1.2));
 	}
 
 }

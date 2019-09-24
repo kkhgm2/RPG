@@ -14,7 +14,7 @@ public class Character {
 		System.out.println("MPは" + mp + "です");
 	}
 
-	public void damage(double at) {
+	public void damage(int at) {
 		this.hp -= at;
 		System.out.println(this.name + "は、" + at + "のダメージを受けた。");
 		System.out.println("残りのHP は" + this.hp + "だ。");
