@@ -7,8 +7,7 @@ public class Magician extends Character{
 	@Override
 	public void introduce() {
 		System.out.println("私は " + name + " 魔法使いだ！　だから魔力が強いぞ！！");
-		System.out.println("HPは" + hp + "です");
-		System.out.println("MPは" + mp + "です");
+		super.introduce();
 	}
 
 	@Override

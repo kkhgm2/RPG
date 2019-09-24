@@ -10,7 +10,6 @@ public class Character {
 	}
 
 	public void introduce() {
-		System.out.println("私は" + name);
 		System.out.println("HPは" + hp + "です");
 		System.out.println("MPは" + mp + "です");
 	}
