@@ -18,9 +18,9 @@ public class Knight extends Character{
 		System.out.println(c.name + "の剣攻撃！");
 		if(c instanceof Gunman) {
 			System.out.println(c.name + "はガンマンだ！　チャンス！！");
-			c.damage((int)Math.floor(this.mp * 1.5));
+			c.damage((int)Math.floor(this.hp * 1.5));
 		}else {
-			c.damage((int)Math.floor(this.mp ));
+			c.damage((int)Math.floor(this.hp ));
 		}
 	}
 }
