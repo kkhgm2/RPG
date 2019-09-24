@@ -12,7 +12,7 @@ public class Knight extends Character{
 
 	@Override
 	public void attack(Character c) {
-		System.out.println(this.name + "の攻撃！");
+		System.out.println(this.name + "の剣攻撃！");
 		c.damage((int)Math.floor(this.hp*1.2));
 	}
 
