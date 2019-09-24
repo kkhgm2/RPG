@@ -17,13 +17,13 @@ public class Character {
 
 	public void damage(double at) {
 		this.hp -= at;
-		System.out.println(this.name + "は、" + at + "の攻撃を受けた。");
+		System.out.println(this.name + "は、" + at + "のダメージを受けた。");
 		System.out.println("残りのHP は" + this.hp + "だ。");
 	}
 
 	public void attack(Character c) {
 		System.out.println(this.name + "の攻撃！");
-		c.damage(Math.floor(this.hp*0.25));
+		c.damage(this.hp);
 	}
 
 	public static void  main(String[] args) {
