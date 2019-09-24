@@ -1,4 +1,3 @@
-
 public class Knight extends Character{
 	public Knight(String name, int hp, int mp) {
 		super(name, hp *= 1.2 , mp *= 0.8);
@@ -12,8 +11,16 @@ public class Knight extends Character{
 
 	@Override
 	public void attack(Character c) {
-		System.out.println(this.name + "の剣攻撃！");
-		c.damage((int)Math.floor(this.hp*1.2));
+		blade(c);
 	}
 
+	public void blade(Character c) {
+		System.out.println(c.name + "の剣攻撃！");
+		if(c instanceof Gunman) {
+			System.out.println(c.name + "はガンマンだ！　チャンス！！");
+			c.damage((int)Math.floor(this.mp * 1.5));
+		}else {
+			c.damage((int)Math.floor(this.mp ));
+		}
+	}
 }

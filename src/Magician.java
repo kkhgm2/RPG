@@ -12,8 +12,18 @@ public class Magician extends Character{
 
 	@Override
 	public void attack(Character c) {
+		magic(c);
+	}
+
+	public void magic(Character c) {
 		System.out.println(this.name + "の魔法攻撃！");
-		c.damage((int)Math.floor(this.mp*1.2));
+		if(c instanceof Knight) {
+			System.out.println(c.name + "は戦士だ！　チャンス！！");
+			c.damage((int)Math.floor(this.mp * 1.5));
+		}else {
+			c.damage((int)Math.floor(this.mp ));
+		}
+
 	}
 
 }
