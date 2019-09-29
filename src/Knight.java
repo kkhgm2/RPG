@@ -15,12 +15,12 @@ public class Knight extends Character{
 	}
 
 	public void blade(Character c) {
-		System.out.println(c.name + "の剣攻撃！");
+		System.out.println(this.name + "の剣攻撃！");
 		if(c instanceof Gunman) {
 			System.out.println(c.name + "はガンマンだ！　チャンス！！");
-			c.damage((int)Math.floor(this.hp * 1.5));
+			c.damage((int)Math.floor(this.hp * 0.5));
 		}else {
-			c.damage((int)Math.floor(this.hp ));
+			c.damage((int)Math.floor(this.hp * 0.3));
 		}
 	}
 }

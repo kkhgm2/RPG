@@ -18,9 +18,9 @@ public class Gunman extends Character{
 		System.out.println(this.name + "の銃攻撃！");
 		if(c instanceof Magician) {
 			System.out.println(c.name + "は魔法使いだ！　チャンス！！");
-			c.damage((int)Math.floor(this.hp * 1.5));
+			c.damage((int)Math.floor(this.hp * 0.5));
 		}else {
-			c.damage((int)Math.floor(this.hp ));
+			c.damage((int)Math.floor(this.hp  * 0.3));
 		}
 	}
 }

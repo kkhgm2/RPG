@@ -19,9 +19,9 @@ public class Magician extends Character{
 		System.out.println(this.name + "の魔法攻撃！");
 		if(c instanceof Knight) {
 			System.out.println(c.name + "は戦士だ！　チャンス！！");
-			c.damage((int)Math.floor(this.mp * 1.5));
+			c.damage((int)Math.floor(this.mp *0.5));
 		}else {
-			c.damage((int)Math.floor(this.mp ));
+			c.damage((int)Math.floor(this.mp * 0.3));
 		}
 
 	}
