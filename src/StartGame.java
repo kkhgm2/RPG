@@ -31,26 +31,28 @@ public class StartGame {
 			while(teamA[noA].hp > 0 && teamB[noB].hp > 0) {
 
 				teamA[noA].attack(teamB[noB]);
-				judge(noA, noB, teamA, teamB);
-				if(teamA[noA].hp <= 0 || teamB[noB].hp <= 0) break;
+				if(judge(noA, noB, teamA, teamB) == true) break;
 
 				teamB[noB].attack(teamA[noA]);
-				judge(noA, noB, teamA, teamB);
-				if(teamA[noA].hp <= 0 || teamB[noB].hp <= 0) break;
+				if(judge(noA, noB, teamA, teamB) == true) break;
 			}
 		}
 	}
 
-	public static void judge(int noA,int noB, Character[] teamA, Character[] teamB) {
+	public static boolean  judge(int noA,int noB, Character[] teamA, Character[] teamB) {
 		String winner = null;
+		boolean win = false;
 		if(teamA[noA].hp <= 0 || teamB[noB].hp <= 0) {
 			if(teamA[noA].hp < 0 ) {
 				winner = teamB[noB].name;
+				win = true;
 			}else {
 				winner = teamA[noA].name;
+				win = true;
 			}
 			System.out.println("勝者" + winner + "です");
 			System.out.println();
 		}
+		return win;
 	}
 }
