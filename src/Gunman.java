@@ -1,4 +1,4 @@
-public class Gunman extends Character{
+public class Gunman extends Character implements Movable{
 	public Gunman(String name, int hp, int mp) {
 		super(name, hp *= 1.1 , mp *= 1.1);
 	}
@@ -22,5 +22,11 @@ public class Gunman extends Character{
 		}else {
 			c.damage((int)Math.floor(this.hp  * 0.3));
 		}
+	}
+
+	@Override
+	public void move(Character target) {
+		System.out.println("相手のHP は" + target.hp + "だ。");
+		target.damage(this.hp);
 	}
 }

@@ -1,5 +1,5 @@
 
-public class Magician extends Character{
+public class Magician extends Character implements Movable{
 	public Magician(String name, int hp, int mp) {
 		super(name, hp *= 0.8 , mp *= 1.2);
 	}
@@ -24,6 +24,12 @@ public class Magician extends Character{
 			c.damage((int)Math.floor(this.mp * 0.3));
 		}
 
+	}
+
+	@Override
+	public void move(Character target) {
+		System.out.println("相手のHP は" + target.hp + "だ。");
+		attack(target);
 	}
 
 }

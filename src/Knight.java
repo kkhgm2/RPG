@@ -1,4 +1,4 @@
-public class Knight extends Character{
+public class Knight extends Character implements Movable{
 	public Knight(String name, int hp, int mp) {
 		super(name, hp *= 1.2 , mp *= 0.8);
 	}
@@ -22,5 +22,12 @@ public class Knight extends Character{
 		}else {
 			c.damage((int)Math.floor(this.hp * 0.3));
 		}
+	}
+
+	@Override
+	public void move(Character target) {
+		System.out.println("相手のHP は" + target.hp + "だ。");
+		target.damage(this.hp);
+
 	}
 }
